@@ -23,6 +23,8 @@ reduction_size=$2
 echo "$reduction_size"
 test_var=$3
 echo "$test_var"
+test_var2=$4
+echo "$test_var2"
 # echo "$1"
 # echo "$2"
 
