@@ -19,6 +19,8 @@ mkdir -p output
 output_filename=$1
 echo "testing output below"
 echo "$output_filename"
+reduction_size=$2
+echo "$reduction_size"
 # echo "$1"
 # echo "$2"
 
