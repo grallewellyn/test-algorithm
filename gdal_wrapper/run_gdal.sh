@@ -16,8 +16,8 @@ basedir=$(dirname "$(readlink -f "$0")")
 
 mkdir -p output
 
-echo "$1"
-echo "$2"
+# echo "$1"
+# echo "$2"
 
 # DPS downloads all files provided as inputs to
 # this directory called input.
