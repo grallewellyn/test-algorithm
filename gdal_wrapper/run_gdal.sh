@@ -21,6 +21,8 @@ echo "testing output below"
 echo "$output_filename"
 reduction_size=$2
 echo "$reduction_size"
+test_var=$3
+echo "$test_var"
 # echo "$1"
 # echo "$2"
 
