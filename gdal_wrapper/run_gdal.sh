@@ -16,6 +16,9 @@ basedir=$(dirname "$(readlink -f "$0")")
 
 mkdir -p output
 
+output_filename=$1
+echo "testing output below"
+echo "$output_filename"
 # echo "$1"
 # echo "$2"
 
