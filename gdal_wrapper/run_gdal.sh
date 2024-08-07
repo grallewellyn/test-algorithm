@@ -16,22 +16,25 @@ basedir=$(dirname "$(readlink -f "$0")")
 
 mkdir -p output
 
+echo "$1"
+echo "$2"
+
 # DPS downloads all files provided as inputs to
 # this directory called input.
 # In our example the image will be downloaded here.
-INPUT_DIR=input
+# INPUT_DIR=input
 
-# Since we only have one input we can list it as below
-input_filename=$(ls -d input/*)
+# # Since we only have one input we can list it as below
+# input_filename=$(ls -d input/*)
 
-# Read the positional argument as defined in the algorithm registration here
-output_filename=$1
-reduction_size=$2
+# # Read the positional argument as defined in the algorithm registration here
+# output_filename=$1
+# reduction_size=$2
 
-# Call the script using the absolute paths
-# Use the updated environment when calling 'conda run'
-# This lets us run the same way in a Terminal as in DPS
-# Any output written to the stdout and stderr streams will be automatically captured and placed in the output dir
-# echo conda run --live-stream --name vanilla python ${basedir}/gdal_wrapper.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
+# # Call the script using the absolute paths
+# # Use the updated environment when calling 'conda run'
+# # This lets us run the same way in a Terminal as in DPS
+# # Any output written to the stdout and stderr streams will be automatically captured and placed in the output dir
+# # echo conda run --live-stream --name vanilla python ${basedir}/gdal_wrapper.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
 
-conda run --live-stream --name python python ${basedir}/printArguments.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
+# conda run --live-stream --name python python ${basedir}/printArguments.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
