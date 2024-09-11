@@ -1,0 +1,13 @@
+algorithm_description: test
+algorithm_name: dummy-success-alg
+algorithm_version: main
+build_command: test-algorithm/gdal_wrapper/build-env.sh
+disk_space: 1GB
+docker_container_url: mas.dit.maap-project.org/root/maap-workspaces/base_image/dps_base_image:dps_base_image
+inputs:
+  config: []
+  file: []
+  positional: []
+queue: maap-dps-worker-8gb
+repository_url: https://github.com/grallewellyn/test-algorithm.git
+run_command: test-algorithm/gdal_wrapper/run_gdal.sh
