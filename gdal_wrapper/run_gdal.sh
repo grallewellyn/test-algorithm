@@ -47,4 +47,4 @@ basedir=$(dirname "$(readlink -f "$0")")
 # # echo conda run --live-stream --name vanilla python ${basedir}/gdal_wrapper.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
 
 # conda run --live-stream --name python python ${basedir}/printArguments.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
-conda run --live-stream --name python python ${basedir}/set_secrets.py 
+conda run --live-stream --name python python ${basedir}/run_long_time.py 
