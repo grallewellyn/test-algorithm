@@ -14,11 +14,11 @@ basedir=$(dirname "$(readlink -f "$0")")
 # but instead a relative one as the DPS creates
 # a temp working directory for our code.
 
-# mkdir -p output
+mkdir -p output
 
-# output_filename=$1
-# echo "testing output below"
-# echo "$output_filename"
+test=$1
+echo "testing output below"
+echo "$test"
 # reduction_size=$2
 # echo "$reduction_size"
 # test_var=$3
