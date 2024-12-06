@@ -16,9 +16,27 @@ basedir=$(dirname "$(readlink -f "$0")")
 
 mkdir -p output
 
-test=$1
+aoi=$1
 echo "testing output below"
-echo "$test"
+echo "$aoi"
+doi=$2
+echo "$doi"
+lat=$3
+echo "$lat"
+lon=$4
+echo "$lon"
+beams=$5
+echo "$beams"
+columns=$6
+echo "$columns"
+query=$7
+echo "$query"
+limit=$8
+echo "$limit"
+temporal=$9
+echo "$temporal"
+output=$10
+echo "$output"
 # reduction_size=$2
 # echo "$reduction_size"
 # test_var=$3
