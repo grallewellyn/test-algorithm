@@ -47,3 +47,13 @@ basedir=$(dirname "$(readlink -f "$0")")
 # # echo conda run --live-stream --name vanilla python ${basedir}/gdal_wrapper.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
 
 # conda run --live-stream --name python python ${basedir}/printArguments.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
+
+# Since we only have one input we can list it as below
+INPUT_FILENAME=$(ls -d input/*)
+echo "$INPUT_FILENAME"
+
+# Read the positional argument as defined in the algorithm registration here
+OUTPUT_FILENAME=$1
+REDUCTION_SIZE=$2
+
+python ${basedir}/aws-access.py --input_file ${INPUT_FILENAME} --output_file output/${OUTPUT_FILENAME} --outsize ${REDUCTION_SIZE}
