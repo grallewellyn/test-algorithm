@@ -52,4 +52,6 @@ basedir=$(dirname "$(readlink -f "$0")")
 INPUT_FILENAME=$(ls -d input/*)
 echo "$INPUT_FILENAME"
 
+which aws
+
 python ${basedir}/aws-access.py --input_file ${INPUT_FILENAME} 
