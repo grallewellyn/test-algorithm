@@ -52,8 +52,4 @@ basedir=$(dirname "$(readlink -f "$0")")
 INPUT_FILENAME=$(ls -d input/*)
 echo "$INPUT_FILENAME"
 
-# Read the positional argument as defined in the algorithm registration here
-OUTPUT_FILENAME=$1
-REDUCTION_SIZE=$2
-
 python ${basedir}/aws-access.py --input_file ${INPUT_FILENAME} 
