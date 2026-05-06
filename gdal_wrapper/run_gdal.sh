@@ -56,4 +56,4 @@ echo "$INPUT_FILENAME"
 OUTPUT_FILENAME=$1
 REDUCTION_SIZE=$2
 
-python ${basedir}/aws-access.py --input_file ${INPUT_FILENAME} --output_file output/${OUTPUT_FILENAME} --outsize ${REDUCTION_SIZE}
+python ${basedir}/aws-access.py --input_file ${INPUT_FILENAME} 
