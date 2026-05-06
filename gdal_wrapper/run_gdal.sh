@@ -49,9 +49,7 @@ basedir=$(dirname "$(readlink -f "$0")")
 # conda run --live-stream --name python python ${basedir}/printArguments.py --input_file ${input_filename} --output_file output/${output_filename} --outsize ${reduction_size}
 
 # Since we only have one input we can list it as below
-INPUT_FILENAME=$(ls -d input/*)
-echo "$INPUT_FILENAME"
+INPUT_FOLDER=$(ls -d input/*)
+echo "$INPUT_FOLDER"
 
-which aws
-
-python ${basedir}/aws-access.py --input_file ${INPUT_FILENAME} 
+python ${basedir}/aws-access.py --input_folder ${INPUT_FOLDER} 
