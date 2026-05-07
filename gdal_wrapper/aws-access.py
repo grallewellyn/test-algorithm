@@ -19,5 +19,21 @@ def run_algorithm():
         zip_ref.extractall(extract_to)
     print("unzipped file")
 
+    folder_path = "output_folder/testZip"
+    if not os.path.exists("folder_path"):
+        print(f"Error: The file at {folder_path} was not found.", file=sys.stderr)
+        sys.exit(1)
+
+    # 3. Read and print the contents
+    filename = folder_path+"/manifest.json"
+    try:
+        print(f"--- Contents of {os.path.basename(filename)} ---")
+        with open(filename, 'r') as f:
+            print(f.read())
+        print("--- End of File ---")
+    except Exception as e:
+        print(f"Failed to read file: {e}", file=sys.stderr)
+        sys.exit(1)
+
 if __name__ == "__main__":
     run_algorithm()
