@@ -9,7 +9,7 @@ def run_algorithm():
     parser.add_argument("--input_filename", required=True, help="Path to the input filename")
     
     args = parser.parse_args()
-    filename = args.filename
+    filename = args.input_filename
     print("Name of zipped file is ")
     print(filename)
 
